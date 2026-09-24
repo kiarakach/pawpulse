@@ -8,3 +8,8 @@ verify_jwt = true
 
 [functions.generate-image]
 verify_jwt = true
+
+# send-push is server-to-server (cron / backend). It does its own auth via the
+# x-push-secret shared secret, so JWT verification is disabled here.
+[functions.send-push]
+verify_jwt = false
