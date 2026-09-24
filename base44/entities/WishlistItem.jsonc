@@ -1,0 +1,25 @@
+{
+  "name": "WishlistItem",
+  "type": "object",
+  "properties": {
+    "item_name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "url": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "purchased": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "item_name"
+  ]
+}

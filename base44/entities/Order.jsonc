@@ -1,0 +1,36 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "item_name": {
+      "type": "string"
+    },
+    "store": {
+      "type": "string",
+      "default": "Amazon"
+    },
+    "total": {
+      "type": "number"
+    },
+    "tracking_number": {
+      "type": "string"
+    },
+    "estimated_delivery": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "placed",
+        "shipped",
+        "delivered"
+      ],
+      "default": "placed"
+    }
+  },
+  "required": [
+    "item_name",
+    "total"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Vaccination",
+  "type": "object",
+  "properties": {
+    "pet_id": {
+      "type": "string"
+    },
+    "pet_name": {
+      "type": "string"
+    },
+    "vaccine_name": {
+      "type": "string"
+    },
+    "life_stage": {
+      "type": "string",
+      "enum": [
+        "Baby",
+        "Young",
+        "Adult",
+        "Senior"
+      ]
+    },
+    "due_age": {
+      "type": "string"
+    },
+    "why": {
+      "type": "string"
+    },
+    "done": {
+      "type": "boolean",
+      "default": false
+    },
+    "planned_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "pet_id",
+    "vaccine_name",
+    "life_stage",
+    "due_age"
+  ]
+}

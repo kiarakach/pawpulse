@@ -1,0 +1,56 @@
+{
+  "name": "ServiceBooking",
+  "type": "object",
+  "properties": {
+    "service_type": {
+      "type": "string",
+      "enum": [
+        "Dog Walker",
+        "Pet Sitter"
+      ]
+    },
+    "pet_name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string",
+      "enum": [
+        "30 min",
+        "1 hour",
+        "2 hours",
+        "Half day",
+        "Full day"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "contact_name": {
+      "type": "string"
+    },
+    "contact_phone": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "requested",
+        "confirmed",
+        "completed"
+      ],
+      "default": "requested"
+    }
+  },
+  "required": [
+    "service_type",
+    "pet_name",
+    "date"
+  ]
+}

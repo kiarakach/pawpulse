@@ -1,0 +1,42 @@
+{
+  "name": "Routine",
+  "type": "object",
+  "properties": {
+    "pet_id": {
+      "type": "string"
+    },
+    "pet_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Feeding",
+        "Walk",
+        "Sleep",
+        "Play"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "days": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "done_today": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "pet_id",
+    "type",
+    "label"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "PawPulse",
+  "short_name": "PawPulse",
+  "description": "Your all-in-one hub for pet care, health & fun.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FF6B6B",
+  "icons": [
+    { "src": "/logo.png", "sizes": "450x333", "type": "image/png" }
+  ]
+}

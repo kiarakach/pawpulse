@@ -1,0 +1,10 @@
+project_id = "gfillhcjzskzpjevttnk"
+
+# Edge functions. verify_jwt = true means only requests with a valid Supabase
+# session token (including our silent anonymous sessions) can call them, which
+# keeps the GROQ_API_KEY from being abused by anonymous internet traffic.
+[functions.invoke-llm]
+verify_jwt = true
+
+[functions.generate-image]
+verify_jwt = true

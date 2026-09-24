@@ -1,0 +1,43 @@
+{
+  "name": "DietLog",
+  "type": "object",
+  "properties": {
+    "pet_id": {
+      "type": "string"
+    },
+    "pet_name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "water_oz": {
+      "type": "number"
+    },
+    "meal1_cups": {
+      "type": "number"
+    },
+    "meal2_cups": {
+      "type": "number"
+    },
+    "meal3_cups": {
+      "type": "number"
+    },
+    "treats_count": {
+      "type": "number"
+    },
+    "activity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  },
+  "required": [
+    "pet_id",
+    "date"
+  ]
+}

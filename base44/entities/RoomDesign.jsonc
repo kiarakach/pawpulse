@@ -1,0 +1,27 @@
+{
+  "name": "RoomDesign",
+  "type": "object",
+  "properties": {
+    "pet_id": {
+      "type": "string"
+    },
+    "pet_name": {
+      "type": "string"
+    },
+    "wall_color": {
+      "type": "string"
+    },
+    "bed": {
+      "type": "string"
+    },
+    "toy": {
+      "type": "string"
+    },
+    "bowl": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "pet_id"
+  ]
+}

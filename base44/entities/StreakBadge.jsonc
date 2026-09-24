@@ -1,0 +1,26 @@
+{
+  "name": "StreakBadge",
+  "type": "object",
+  "properties": {
+    "streak_number": {
+      "type": "number"
+    },
+    "badge_name": {
+      "type": "string"
+    },
+    "badge_emoji": {
+      "type": "string"
+    },
+    "earned_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "stat_card_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "streak_number",
+    "badge_name"
+  ]
+}

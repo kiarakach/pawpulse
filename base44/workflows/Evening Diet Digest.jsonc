@@ -1,0 +1,47 @@
+{
+  "description": "Sends today's AI diet digest for the user's pets at 8pm (America/Los_Angeles)",
+  "definition": {
+    "document": {
+      "dsl": "1.0.0",
+      "name": "evening_diet_digest",
+      "version": "1.0",
+      "namespace": "base44"
+    },
+    "do": [
+      {
+        "send_digest": {
+          "call": "invoke_backend_function",
+          "with": {
+            "function_name": "sendProactivePetAlert",
+            "args": {
+              "kind": "diet"
+            }
+          },
+          "then": "end",
+          "x-base44": {
+            "title": "Send diet digest",
+            "description": "Today's Diet Digest for each pet"
+          }
+        }
+      }
+    ]
+  },
+  "trigger": {
+    "condition": null,
+    "config": {
+      "trigger_type": "scheduled",
+      "events": [],
+      "schedule_mode": "recurring",
+      "cron_expression": "0 20 * * *",
+      "one_time_date": null,
+      "timezone": "America/Los_Angeles",
+      "interval_value": null,
+      "interval_unit": null,
+      "interval_anchor": null,
+      "ends_type": "never",
+      "ends_on_date": null,
+      "ends_after_count": null
+    }
+  },
+  "name": "Evening Diet Digest"
+}

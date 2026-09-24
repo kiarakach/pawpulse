@@ -1,0 +1,27 @@
+{
+  "name": "StreakAction",
+  "type": "object",
+  "properties": {
+    "action_type": {
+      "type": "string",
+      "enum": [
+        "app_open",
+        "meal_log",
+        "walk",
+        "vaccination",
+        "ai_doctor"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "pet_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "action_type",
+    "date"
+  ]
+}

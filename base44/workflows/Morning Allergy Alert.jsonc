@@ -1,0 +1,47 @@
+{
+  "description": "Sends today's allergy alerts for the user's pets at 11am (America/Los_Angeles)",
+  "definition": {
+    "document": {
+      "dsl": "1.0.0",
+      "name": "morning_allergy_alert",
+      "version": "1.0",
+      "namespace": "base44"
+    },
+    "do": [
+      {
+        "send_alert": {
+          "call": "invoke_backend_function",
+          "with": {
+            "function_name": "sendProactivePetAlert",
+            "args": {
+              "kind": "allergy"
+            }
+          },
+          "then": "end",
+          "x-base44": {
+            "title": "Send allergy alerts",
+            "description": "Today's Allergy Alerts for each pet"
+          }
+        }
+      }
+    ]
+  },
+  "trigger": {
+    "condition": null,
+    "config": {
+      "trigger_type": "scheduled",
+      "events": [],
+      "schedule_mode": "recurring",
+      "cron_expression": "0 11 * * *",
+      "one_time_date": null,
+      "timezone": "America/Los_Angeles",
+      "interval_value": null,
+      "interval_unit": null,
+      "interval_anchor": null,
+      "ends_type": "never",
+      "ends_on_date": null,
+      "ends_after_count": null
+    }
+  },
+  "name": "Morning Allergy Alert"
+}

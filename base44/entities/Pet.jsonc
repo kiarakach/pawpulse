@@ -1,0 +1,39 @@
+{
+  "name": "Pet",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "species": {
+      "type": "string",
+      "enum": [
+        "dog",
+        "cat"
+      ]
+    },
+    "breed": {
+      "type": "string"
+    },
+    "age": {
+      "type": "string"
+    },
+    "photo_url": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "name",
+    "species"
+  ]
+}

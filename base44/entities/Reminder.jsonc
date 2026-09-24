@@ -1,0 +1,37 @@
+{
+  "name": "Reminder",
+  "type": "object",
+  "properties": {
+    "pet_id": {
+      "type": "string"
+    },
+    "pet_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Checkup",
+        "Medication",
+        "Vaccination",
+        "Grooming"
+      ]
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "pet_id",
+    "title",
+    "due_date"
+  ]
+}
