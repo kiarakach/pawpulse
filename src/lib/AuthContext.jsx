@@ -1,6 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { supabase } from '@/lib/supabaseClient';
 import { base44 } from '@/api/base44Client';
+import { registerPushNotifications } from '@/lib/native';
 
 const AuthContext = createContext();
 
@@ -18,6 +19,8 @@ export const AuthProvider = ({ children }) => {
         setUser(me);
         setIsAuthenticated(true);
         setAuthError(null);
+        // Register this device for push (native only; no-op on web).
+        registerPushNotifications(session.user.id);
       } else {
         setUser(null);
         setIsAuthenticated(false);
