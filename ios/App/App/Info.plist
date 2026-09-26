@@ -66,5 +66,15 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>PawPulse uses the camera so you can take photos of your pets to add to their profiles and share with the community.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>PawPulse needs access to your photos so you can add pictures of your pets to their profiles and posts.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>PawPulse saves shareable pet story graphics to your photo library.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>PawPulse uses your location to find pet-friendly places and services nearby.</string>
 </dict>
 </plist>
